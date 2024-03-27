@@ -22,8 +22,8 @@ let total = pomodoro * 60
 
 // Update timer display
 const updateTimer = () => {
-    const minutes = Math.floor(remainingTime / 60);
-    const seconds = remainingTime % 60;
+    const minutes = Math.floor(remainingTime / 60) < 0 ? 0 : Math.floor(remainingTime / 60);
+    const seconds = remainingTime % 60 < 0 ? 0 : remainingTime % 60;
 
     minutesSpan.textContent = minutes.toString().padStart(2, "0");
     secondsSpan.textContent = seconds.toString().padStart(2, "0");
@@ -123,7 +123,11 @@ function updateCircularProgress(percentage) {
 const shInput = document.querySelector('#pomotime')
 
 shInput.addEventListener('change', (e) => {
+    if(Number(e.target.value) < 0) {
+    shInput.value = pomodoro
+    } else {
     pomodoro = e.target.value
+    
     remainingTime = Number(pomodoro) * 60
 
     total = remainingTime
@@ -133,5 +137,5 @@ shInput.addEventListener('change', (e) => {
 
     minutesSpan.textContent = minutes.toString().padStart(2, "0");
     secondsSpan.textContent = seconds.toString().padStart(2, "0");
-
+    }
 })
