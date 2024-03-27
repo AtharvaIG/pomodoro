@@ -22,8 +22,7 @@
                         <span id="js-minutes">25</span>:<span id="js-seconds">00</span>
                     </div>
                     <div class="info">
-                        <div id="mode-text">Pomodoro</div>
-                        <div id="sessions-text">Sessions: 0</div>
+                        <span>Pomodoro Sessions: <span id="count">0</span></span>
                     </div>
                 </div>
                 <div class="options">
@@ -39,6 +38,8 @@
                     <button id="stop" style="background-color: var(--red);" disabled data-action="start">Stop</button>
                     <button id="reset" data-action="start">Reset</button>
 
+                </div>
+                <div style="display: flex; gap: 12px;">Pomo: <input type="number" id="pomotime" value="25" max="60"></input>
                 </div>
                 </div>
         </div>

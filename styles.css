@@ -33,6 +33,10 @@ button {
   cursor: pointer;
 }
 
+.time {
+  font-weight: 600;
+  font-size: 48px;
+}
 .options {
   display: flex;
   flex-direction: column;
@@ -59,6 +63,7 @@ button {
   border-radius: 10px;
   cursor: pointer;
   margin-bottom: 10px;
+  text-transform: capitalize;
 }
 
 .mode-button.active {
@@ -70,7 +75,7 @@ button:disabled {
 }
 
 .info {
-  display: none;
+  display: flex;
   flex-direction: column;
   margin-top: 20px;
 }
@@ -130,11 +135,11 @@ progress::-webkit-progress-value {
 }
 
 :root {
-  --primary: #007bff;
+  --primary: #4285f4;
   --secondary: #6c757d;
-  --pomodoro: #e35910;
-  --green: #28a745;
-  --red: #dc3545;
+  --pomodoro: black;
+  --green: #34a853;
+  --red: #ea4335;
 }
 
 .circular-progress {
@@ -146,7 +151,7 @@ progress::-webkit-progress-value {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black; /* Background color of the progress bar */
+  background: black; /* Background color of the progress bar */
  }
  
  .inner-circle {
@@ -157,9 +162,4 @@ progress::-webkit-progress-value {
   background-color: #fff; /* Inner circle color */
  }
  
- .percentage {
-  position: relative;
-  font-size: 2rem;
-  color: rgb(0, 0, 0, 0.8);
- }
  
