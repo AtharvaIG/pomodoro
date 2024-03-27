@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Pomodoro Technique</title>
+</head>
+
+<body>
+
+        <div class="circular-progress" data-inner-circle-color="lightgrey" data-percentage="0"
+            data-progress-color="crimson" data-bg-color="black">
+            <div class="inner-circle"></div>
+            <div class="timer">
+                <div class="display">
+                    <button class="mode-button" data-mode="pomodoro" data-time="25">
+                        Pomodoro
+                    </button>
+                    <div class="time">
+                        <span id="js-minutes">25</span>:<span id="js-seconds">00</span>
+                    </div>
+                    <div class="info">
+                        <div id="mode-text">Pomodoro</div>
+                        <div id="sessions-text">Sessions: 0</div>
+                    </div>
+                </div>
+                <div class="options">
+                    <div class="title">Timer Length</div>
+                    <div class="inputs">
+        
+                    </div>
+                </div>
+        
+                <div style="margin-bottom: 24px">
+                    <button id="start-stop" data-action="start">Start</button>
+
+                    <button id="stop" style="background-color: var(--red);" disabled data-action="start">Stop</button>
+                    <button id="reset" data-action="start">Reset</button>
+
+                </div>
+                </div>
+        </div>
+
+        
+        <audio id="beep" src="beep.mp3"></audio>
+
+
+        <script src="script.js"></script>
+</body>
+
+</html>
